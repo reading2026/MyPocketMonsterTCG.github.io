@@ -2,41 +2,75 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我的第一个网站</title>
-
+    <title>我的个人主页</title>
     <style>
         body {
-            background-color: #f5f7fa;
+            margin: 0;
             font-family: Arial, "Microsoft YaHei", sans-serif;
-            text-align: center;
-            padding-top: 100px;
+            background-color: #f0f2f5;
         }
 
+        /* 顶部导航 */
         nav {
             position: fixed;
-            top: 20px;
+            top: 0;
             left: 0;
             right: 0;
+            background-color: #409eff;
+            padding: 15px 0;
             text-align: center;
+            z-index: 1000;
         }
 
         nav a {
-            margin: 0 15px;
-            color: #409eff;
+            color: white;
             text-decoration: none;
+            margin: 0 20px;
             font-size: 18px;
         }
 
-        h1 {
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* 主体区域 */
+        .main {
+            display: flex;
+            margin-top: 80px; /* 顶部导航高度 */
+            padding: 40px;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .main .left {
+            flex: 1;
+        }
+
+        .main .left img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .main .right {
+            flex: 2;
+            text-align: left;
+        }
+
+        .main .right h1 {
             color: #333;
+            font-size: 36px;
+            margin-bottom: 20px;
         }
 
-        p {
-            color: #666;
+        .main .right p {
+            color: #555;
             font-size: 18px;
+            margin-bottom: 30px;
         }
 
-        button {
+        .main .right button {
             background-color: #409eff;
             color: white;
             border: none;
@@ -46,26 +80,48 @@
             cursor: pointer;
         }
 
-        button:hover {
+        .main .right button:hover {
             background-color: #66b1ff;
+        }
+
+        /* 底部 */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f0f2f5;
+            color: #888;
+            margin-top: 50px;
         }
     </style>
 </head>
-
 <body>
 
+    <!-- 顶部导航 -->
     <nav>
-        <a href="index.html">首页</a> |
+        <a href="index.html">首页</a>
         <a href="about.html">关于我</a>
     </nav>
 
-    <h1>你好，世界！</h1>
-    <p>这是我正在学习制作的网站 🎉</p>
-    <button onclick="sayHello()">点我一下</button>
+    <!-- 主体 -->
+    <div class="main">
+        <div class="left">
+            <img src="https://via.placeholder.com/300" alt="个人图片">
+        </div>
+        <div class="right">
+            <h1>欢迎来到我的网站！</h1>
+            <p>这是我制作的个人主页，展示我的项目和技能。希望你喜欢这里的内容！</p>
+            <button onclick="sayHello()">点击我 😄</button>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        &copy; 2026 我的个人主页
+    </footer>
 
     <script>
         function sayHello() {
-            alert("你好！这是我写的第一个交互功能 😄");
+            alert("你好！欢迎来到我的个人主页 😄");
         }
     </script>
 
