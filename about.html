@@ -5,26 +5,119 @@
     <title>关于我</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial, "Microsoft YaHei", sans-serif;
-            background-color: #f5f7fa;
-            text-align: center;
-            padding-top: 100px;
+            background-color: #f0f2f5;
         }
-        a {
-            color: #409eff;
+
+        /* 顶部导航 */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #409eff;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
             text-decoration: none;
+            margin: 0 20px;
             font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* 主体区域 */
+        .main {
+            display: flex;
+            margin-top: 80px; /* 顶部导航高度 */
+            padding: 40px;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .main .left {
+            flex: 1;
+        }
+
+        .main .left img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .main .right {
+            flex: 2;
+            text-align: left;
+        }
+
+        .main .right h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .main .right p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .main .right ul {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* 底部 */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f0f2f5;
+            color: #888;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
 
-    <h1>关于我</h1>
-    <p>这是我的第二个网页页面。</p>
+    <!-- 顶部导航 -->
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我</a>
+    </nav>
 
-    <p>
-        <a href="index.html">返回首页</a>
-    </p>
+    <!-- 主体 -->
+    <div class="main">
+        <div class="left">
+            <img src="https://via.placeholder.com/300" alt="个人图片">
+        </div>
+        <div class="right">
+            <h1>关于我</h1>
+            <p>你好！我是一名热爱编程和网页设计的学习者。这个网站展示了我的个人主页和小项目。</p>
+            <p>我的兴趣和技能包括：</p>
+            <ul>
+                <li>HTML / CSS / JavaScript 网页开发</li>
+                <li>前端框架：React / Vue（正在学习）</li>
+                <li>项目管理和个人作品展示</li>
+                <li>游戏和动画设计</li>
+            </ul>
+            <p>希望你喜欢我的网站，并欢迎留言或联系我！</p>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        &copy; 2026 我的个人主页
+    </footer>
 
 </body>
 </html>
